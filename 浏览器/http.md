@@ -39,6 +39,32 @@
 使用cookie与session以及token进行状态管理
 
 ### http头部字段
+#### 缓存相关
+##### 请求体头
+if-modified-since
+if-no-match
+##### 响应体头
+Expires
+cache-control
+
+last-modified
+ETag
+#### 跨域相关
+   cors跨域请求
+   ##### 请求体头
+   origin
+   ##### 返回体头
+   Access-control-Allow-Origin
+   Access-control-Allow-Credentials
+
+#### 连接相关
+##### 请求体
+connection：keep-alive
+#### 状态有关
+   ##### 请求头
+   cookie
+   ##### 返回体头
+   setCookie
 
 ### https
 https使用的是TLS协议
