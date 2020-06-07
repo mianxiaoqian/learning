@@ -2,7 +2,7 @@
  * @Author: qianqian.zhao
  * @Date: 2020-04-02 15:53:38
  * @LastEditors: qianqian.zhao
- * @LastEditTime: 2020-04-03 14:44:07
+ * @LastEditTime: 2020-06-07 13:32:20
  * @Description: 
  -->
 vue一些引入版本：
@@ -23,3 +23,5 @@ vue页面渲染空白，而且控制台无报错信息
 2、Vue 下的静态属性和方法的挂载主要是在 src/core/global-api 目录下的代码处理的
 
 3、web-runtime.js 主要是添加web平台特有的配置、组件和指令，web-runtime-with-compiler.js 给Vue的 $mount 方法添加 compiler 编译器，支持 template。
+
+### 父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的；

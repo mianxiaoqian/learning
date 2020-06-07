@@ -2,7 +2,7 @@
  * @Author: qianqian.zhao
  * @Date: 2020-05-26 16:55:38
  * @LastEditors: qianqian.zhao
- * @LastEditTime: 2020-06-02 10:17:46
+ * @LastEditTime: 2020-06-02 16:46:15
  * @Description: vue知识点
  -->
 
@@ -22,6 +22,8 @@ Objetc.definePrototype与pxory的比较
 2、 
 
 vue对数组的监听
+
+#### vue自定义组件上实现v-model
 
 #### vue中nextTick的实现原理
 主要是使用的事件循环。会分别判断promise、setImmediate、setTimeout、是否支持使用
@@ -46,10 +48,11 @@ deActivated 使用keep-alive时，组件被销毁时调用
 #### vue生命周期在父子组件间的调用顺序
 
 #### vue的通信方式
-prop 父传子,$emit 子向父传递事件
+prop 父传子(是响应式的),$emit 子向父传递事件，$on 父组件接收，也可以在prop属性上增加async修饰符，进行事件接收的省略
 不相关组件间（一般是组件跨级传递消息）使用EventBus发布订阅的on与emit
-祖辈组件上下之间使用provide与inject传递
-$attrs/$listeners？
-父可以使用ref调用子，子可以使用$parent调用父
+祖辈组件上下之间使用依赖注入provide与inject传递，提供的property是非响应式的
+$attrs/$listeners ？ vue2.6新增
+父可以使用ref调用子（ref只在组件渲染结束后生效，且不是响应式的），子可以使用$parent调用父; 父还可以通过$children访问子
 vuex的使用共同状态
+插槽内子向父传递数据通过v-bind指令被称为插槽prop
 
