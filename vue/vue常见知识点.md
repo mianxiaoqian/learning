@@ -2,7 +2,7 @@
  * @Author: qianqian.zhao
  * @Date: 2020-05-26 16:55:38
  * @LastEditors: qianqian.zhao
- * @LastEditTime: 2020-06-07 16:26:03
+ * @LastEditTime: 2020-07-27 09:35:43
  * @Description: vue知识点
  -->
 
@@ -92,3 +92,10 @@ keep-alive可以实现组件缓存，当组件切换时，不会销毁组件，�
 
 #### keep-alive相关的生命周期函数
 activated、deactivated
+
+
+#### $set
+
+#### axios
+
+
