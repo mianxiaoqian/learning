@@ -2,7 +2,7 @@
  * @Author: qianqian.zhao
  * @Date: 2020-05-26 16:55:38
  * @LastEditors: qianqian.zhao
- * @LastEditTime: 2020-07-27 09:35:43
+ * @LastEditTime: 2020-10-22 16:48:45
  * @Description: vue知识点
  -->
 
@@ -12,7 +12,9 @@ vm是一个桥梁，可以实现数据和视图的双向绑定；
 
 #### vue的双向数据绑定
 vue2.0是使用Object.definePrototype进行数据劫持，
-然后收集每一个组件内的watch内的监听订阅
+收集器收集watcher内的订阅者和dom上的使用者作为订阅者；
+数据劫持的set函数是发布者；当数据改变时，set函数会监听到，会执行set函数，这时向收集器内的订阅者发布消息；
+订阅者收到消息各自改变即可；
 当数据发生变化时进行通知，使用了发布、订阅模式
 
 vue3.0是是使用proxy进行的数据劫持；
